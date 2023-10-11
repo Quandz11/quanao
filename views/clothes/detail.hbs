@@ -1,0 +1,20 @@
+<div class="container col-md-8 card mt-5 pt-5">
+    <div class="row">
+        <div class="col text-center">
+            <img src="{{clothes.image}}" alt="" width="300" height="500">
+           
+        </div>
+        <div class="col">
+             <h3 >{{ clothes.name }}</h3>
+            <h5>Size: {{ clothes.size }}</h5>
+            <h5>Color: {{ clothes.color }}</h5>
+            <h5>Price: {{ clothes.price }}$</h5>
+            <h5>Quantity: {{ clothes.quantity }}</h5>
+            <form action="/clothes/cart" method="post">
+                <input class="form-control" type="number" name="qty" min="1" max="200">
+                <input type="hidden" name="id" value="{{clothes._id}}">
+                <input type="submit" class="btn btn-danger" value="Add To Cart" >
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container col-md-8 text-center">
+    <table class="table table-primary">
+        <tr>
+            <th colspan="7" class="h1 text-uppercase text-success">Clothes</th>
+            <th>
+                <a class="btn btn-success" href="/clothes/add">Add</a>
+            </th>
+
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {{#each clothes }}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ size }}</td>
+            <td>{{ type }}</td>
+            <td>{{ color }}</td>
+            <td>
+                <a href="/clothes/detail/{{_id}}">
+                    <img src="{{image}}" width="300" height="500">
+                </a>
+            </td>
+            <td>{{ quantity }}</td>
+            <td>{{ price }}</td>
+            <td>
+                <a class="btn btn-success" href="/clothes/edit/{{_id}}">Edit</a>
+                <a class="btn btn-danger" href="/clothes/delete/{{_id}}" >Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

@@ -1,0 +1,34 @@
+<div class="container col-md-6">
+    <form action="/clothes/edit/{{clothes._id}}" method="post">
+    <h1 class="text text-success text-uppercase text-center">Edit clothes</h1>
+    <div class="form-group mt-2">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" name="name" id="" required value="{{clothes.name}}">
+    </div>
+    <div class="form-group mt-2">
+        <label for="size">Size</label>
+        <input class="form-control" class="form-control" type="text" name="size" id="" required value="{{clothes.size}}">
+    </div>
+    <div class="form-group mt-2">
+        <label for="color">Color</label>
+        <input class="form-control" type="text" name="color" id="" required value="{{clothes.color}}">
+    </div>
+    <div class="form-group mt-2">
+        <label for="image">Image</label>
+        <input class="form-control" type="text" name="image" id="" required value="{{clothes.image}}">
+    </div>
+    <div class="form-group mt-2">
+        <label for="quantity">Quantity</label>
+        <input class="form-control" type="number" name="quantity" id="" required value="{{clothes.quantity}}">
+    </div>
+    <div class="form-group mt-2">
+        <label for="price">Price</label>
+        <input class="form-control" type="number" name="price" id="" required value="{{clothes.price}}">
+    </div>
+
+    <div class="form-group text text-center mt-5">
+        <input  class="btn btn-success col-md-3" type="submit" value="Add">
+        <input class="btn btn-danger col-md-3" type="button" value="Clear">
+    </div>
+</form>
+</div>
